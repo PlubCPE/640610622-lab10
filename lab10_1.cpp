@@ -24,10 +24,9 @@ int main(){
 	//use 'fixed' and 'setprecision' to fix the number of decimal digits for displaying
 	//you can change input argument of 'setprecision()' to see the effect
 	
-		for(int i = 1 ; ; i++)
+		for(int i = 1 ;prevbal > 0 ; i++)
 		{ 	
-			if(prevbal > 0)
-			{
+			
 						cout << fixed << setprecision(2);
 						cout << setw(13) << left << i; 
 						cout << setw(13) << left << prevbal;
@@ -38,10 +37,10 @@ int main(){
 							amount = total;
 						}
 						cout << setw(13) << left << amount;
-						cout << setw(13) << left << (newba = total - amount);
-						cout << "\n";
+						cout << setw(13) << left << (newba = total - amount) << endl;
 						prevbal = newba;
-			}
+						
+			
 			
 		}
 	
